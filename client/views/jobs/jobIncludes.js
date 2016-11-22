@@ -34,31 +34,5 @@ Template.jobFeatured.events({
     var job = template.data;
     var btn = $(event.currentTarget);
     btn.button('loading');
-    StripeCheckout.open({
-      key: Meteor.settings.public.Stripe.pubKey,
-      name: 'We Work Meteor',
-      billingAddress: false,
-      allowRememberMe: true,
-      description: 'Featured Job Post - 30 Days',
-      currency: "usd",
-      amount: 10000,
-      email: getUserEmail(Meteor.user()),
-      closed: function() {
-        btn.button('reset');
-      },
-      token: function(token, args) {
-        //console.log(token);
-        Meteor.call("createFeaturedJobCharge", token.id, job._id, function(error, result) {
-          if (error) {
-            console.log("Insert Error:", error);
-          } else {
-            console.log(result);
-            // Router.go("orders");
-            //successNotification('Card Saved');
-          }
-          btn.button('reset');
-        });
-      }
-    });
   }
 });

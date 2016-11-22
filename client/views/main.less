@@ -8,6 +8,7 @@ h1,h2,h3,h4,h5{
 
 #content-wrapper{
     min-height: 800px;
+    margin-top: 85px;
 
     a:not(.btn):visited {
         color: @text-color;
@@ -36,6 +37,13 @@ h1,h2,h3,h4,h5{
     margin-top: 10px;
 }
 
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
 @media screen and (min-width:768px) {
     .nav > li > p {
         padding: 15px;
@@ -48,17 +56,18 @@ h1,h2,h3,h4,h5{
 
 #callToAction{
     margin-top: 20px;
+    margin-left: 142px;
     a{
        font-size: 125%;
     }
-} 
+}
 
 #connection-lost-banner{
     text-align: center;
 }
 
 nav.navbar, .btn, li a, .input-group-addon, .jumbotron, .panel, .label{
-  border-radius: 0px !important; 
+  border-radius: 0px !important;
 }
 
 .form-control{
@@ -77,6 +86,7 @@ nav.navbar, .btn, li a, .input-group-addon, .jumbotron, .panel, .label{
 
 .btn {
   outline: none !important;
+  border-radius: 10px !important;
 }
 
 .label{
@@ -84,7 +94,7 @@ nav.navbar, .btn, li a, .input-group-addon, .jumbotron, .panel, .label{
 }
 
 footer, .jumbotron {
-    background-color: #27272b;
+    background-color: #313174;
     color:white;
 }
 
@@ -113,7 +123,7 @@ nav.navbar {
         }
     }
     .nav.navbar-nav li{
-        
+
         p.navbar-text{
            font-size: 12px;
             font-weight: normal;
@@ -132,15 +142,15 @@ nav.navbar {
                 background:none;
                 color:@brand-primary;
             }
-            
-        } 
+
+        }
     }
 }
 
 footer {
     border-top: 2px solid @brand-primary;
     margin-top:20px;
-    padding: 20px 0px 20px 0px;    
+    padding: 20px 0px 20px 0px;
 
     a:visited {
         color: @brand-primary;
@@ -156,6 +166,11 @@ footer {
 //     height: 200px;
 //     width:200px;
 // }
+
+.panel-body {
+    background-color: #f1f1f1!important;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important;
+}
 
 .note-editor{
     .btn-toolbar{

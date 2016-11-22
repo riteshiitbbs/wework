@@ -17,9 +17,10 @@
         {{#each jobs}}
             {{>jobSmall}}
         {{/each}}
-        <div class="panel panel-default">
-            <div class="panel-body text-center">
-                <h4><a href="{{pathFor 'jobs'}}">View All {{getCount 'jobCount'}} Jobs&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a></h4>
+        <div class="panel panel-default" style="border-color: transparent !important;">
+            <div class="panel-body text-center" style="box-shadow: none !important;
+    background-color: transparent !important;">
+                <h4><a href="{{pathFor 'jobs'}}">Show all jobs&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a></h4>
             </div>
         </div>
     </section>

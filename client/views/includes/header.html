@@ -11,18 +11,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">We Work Meteor</a>
+                    <a class="navbar-brand" href="/">StartupBox</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="{{isActiveRoute regex='^jobs$'}}"><a href="{{pathFor 'jobs'}}">Jobs</a></li>
-                        <li class="{{isActiveRoute regex='profiles'}}"><a href="{{pathFor 'profiles'}}">Developers</a></li>
+                        <li class="{{isActiveRoute regex='^jobs$'}}"><a href="{{pathFor 'jobs'}}">Find Jobs</a></li>
+                        <li class="{{isActiveRoute regex='profiles'}}"><a href="{{pathFor 'profiles'}}">Find Profiles</a></li>
                         {{#if currentUser}}
-                            <li class="{{isActiveRoute regex='jobNew'}}"><a href="{{pathFor 'jobNew'}}">Post a Job</a></li>
+                            <li class="{{isActiveRoute regex='jobNew'}}"><a href="{{pathFor 'jobNew'}}">Post Job</a></li>
                             {{#unless currentUser.isDeveloper}}
                                 <li class="{{isActiveRoute regex='^profile$'}}">
-                                    <a href="{{pathFor 'profileNew'}}">Create Developer Profile</a>
+                                    <a href="{{pathFor 'profileNew'}}">Create Dev. Profile</a>
                                 </li>
                             {{/unless}}
                         {{/if}}
@@ -31,8 +31,8 @@
                         {{#if currentUser}}
                         	{{>headerUserMenu}}
                         {{else}}
-                            <li class="{{isActiveRoute regex='signIn'}}"><a href="{{pathFor 'signIn'}}">Log In</a></li>
-                            <li class="{{isActiveRoute regex='signUp'}}"><a href="{{pathFor 'signUp'}}">Sign Up</a></li>
+                            <li class="{{isActiveRoute regex='signIn'}}"><a href="{{pathFor 'signIn'}}">Login</a></li>
+                            <li class="{{isActiveRoute regex='signUp'}}"><a href="{{pathFor 'signUp'}}">Register</a></li>
                         {{/if}}
                     </ul>
                 </div>

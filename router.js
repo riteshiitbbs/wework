@@ -11,7 +11,7 @@ Router.configure({
     },
     progressSpinner: false,
     progressDelay: 250,
-    title: "We Work Meteor - Job board and developer listing just for Meteor"
+    title: "StartupBox - Place where startup entusiasts meet!"
 });
 
 
@@ -61,12 +61,12 @@ Router.map(function() {
 
     this.route('jobs', {
         path: '/jobs',
-        title: "We Work Meteor - All Jobs"
+        title: "StartupBox - All Jobs"
     });
 
     this.route('myJobs', {
         path: '/myjobs',
-        title: "We Work Meteor - My Jobs",
+        title: "StartupBox - My Jobs",
         data: function() {
             return {
                 jobs: Jobs.find({
@@ -112,12 +112,12 @@ Router.map(function() {
 
     this.route('jobNew', {
         path: '/job',
-        title: "We Work Meteor - Post a Job"
+        title: "StartupBox - Post a Job"
     });
 
     this.route('jobEdit', {
         path: '/jobs/:_id/:slug/edit',
-        title: "We Work Meteor - Edit Job Post",
+        title: "StartupBox - Edit Job Post",
         data: function() {
             return {
                 job: Jobs.findOne({
@@ -132,7 +132,7 @@ Router.map(function() {
 
     this.route('profiles', {
         path: '/profiles',
-        title: "We Work Meteor - All Developers",
+        title: "StartupBox - All Developers",
         subscriptions: function() {
             return subs.subscribe('developerUsers');
         }
@@ -167,7 +167,7 @@ Router.map(function() {
 
     this.route('profileNew', {
         path: '/profile',
-        title: "We Work Meteor - Create Developer Profile",
+        title: "StartupBox - Create Developer Profile",
         onBeforeAction: function() {
             if (Meteor.user().isDeveloper) {
                 Router.go('profile', Profiles.findOne({
@@ -181,7 +181,7 @@ Router.map(function() {
 
     this.route('profileEdit', {
         path: '/profiles/:_id/:slug/edit',
-        title: "We Work Meteor - Edit My Developer Profile",
+        title: "StartupBox - Edit My Developer Profile",
         data: function() {
             return {
                 profile: Profiles.findOne({
